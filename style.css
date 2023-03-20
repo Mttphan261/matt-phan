@@ -36,5 +36,10 @@ nav {
 }
 
 table {
-    margin-top: 5%;
+    display: inline;
+    margin-right:50%;
+}
+
+#SuperMetroid {
+    display: inline;
 }
