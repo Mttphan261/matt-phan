@@ -37,9 +37,20 @@ nav {
 
 table {
     display: inline;
-    margin-right:50%;
 }
 
 #SuperMetroid {
     display: inline;
+}
+
+.gamePair {
+    display: inline;
+}
+
+.gamePics {
+    width: 300px;
+}
+
+.quote {
+    margin: 0;
 }
