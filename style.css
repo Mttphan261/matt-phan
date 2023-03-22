@@ -48,7 +48,9 @@ table {
 }
 
 .gamePics {
-    width: 300px;
+    width: 450px;
+    margin-left: 35%;
+    padding-top: 35px;
 }
 
 .quote {

@@ -4,6 +4,7 @@
 function addingEventListener() {
 
     let currentGame
+    let currentQuote    
 
     const SNES = document.getElementById('SuperNintendo');
     const GB = document.getElementById('gameboy');
@@ -19,17 +20,12 @@ function addingEventListener() {
     const ds = document.getElementById('DarkSouls');
     const dmc5 = document.getElementById('DevilMayCry5');
 
-    const MetP = document.createElement('p');
-    MetP.textContent = '"Super Metroid Baby" - Matt Phan'
-    MetP.classList.add('quote');
-
-    const PokP = document.createElement('p');
-    PokP.textContent = '"Pokemon Silver  Baby" - Matt Phan"'
-    PokP.classList.add('quote');
-
-    const ReP = document.createElement('p');
-    ReP.textContent = '"Resident Evil 4 Baby" - Matt Phan"'
-    ReP.classList.add('quote');
+    const smq = document.getElementById('SuperMetroidQuote');
+    const pkmq = document.getElementById('PokemonQuote');
+    const re4q = document.getElementById('ResidentEvil4Quote');
+    const kh2q =  document.getElementById('KingdomHearts2Quote');
+    const dsq = document.getElementById('DarkSoulsQuote');
+    const dmc5q = document.getElementById('DevilMayCry5Quote');
 
 
     // const gameArray = [metroid,poke]
@@ -43,8 +39,7 @@ function addingEventListener() {
         //     game.style.display="none";
         // }
         metroid.style.display="block";
-        document.body.appendChild(MetP);
-        document.body.removeChild(ReP, PokP);
+        
     }
 
     function showGBFavGame() {
@@ -56,8 +51,6 @@ function addingEventListener() {
         //     game.style.display="none";
         // }
         poke.style.display="block";
-        document.body.appendChild(PokP);
-        document.body.removeChild(MetP, ReP);
     }
 
     function showGCNFavGame() {
@@ -66,8 +59,6 @@ function addingEventListener() {
         }
         currentGame = re4;
         re4.style.display="block";
-        document.body.appendChild(ReP);
-        document.body.removeChild(PokP, MetP);
     }
 
     function showPS2FavGame() {
@@ -94,6 +85,56 @@ function addingEventListener() {
         dmc5.style.display="block";
     }
 
+    function showSNESQuote() {
+        if (currentQuote) {
+            currentQuote.style.display="none";
+        }
+        currentQuote = smq;
+        smq.style.display="block";
+        }
+    
+
+    function showGBFavQuote() {
+        if (currentQuote) {
+            currentQuote.style.display="none";
+        }
+        currentQuote = pkmq;
+        pkmq.style.display="block";
+        }
+
+    function showGCNFavQuote() {
+        if (currentQuote) {
+            currentQuote.style.display="none";
+        }
+        currentQuote = re4q;
+        re4q.style.display="block";
+        }
+
+    function showPS2FavQuote() {
+        if (currentQuote) {
+            currentQuote.style.display="none";    
+        }
+        currentQuote = kh2q;
+        kh2q.style.display="block";
+        }
+
+    function showPS3FavQuote() {
+        if (currentQuote) {
+            currentQuote.style.display="none";
+        }
+        currentQuote =  dsq;
+        dsq.style.display="block";
+        }
+    
+    function showPS4FavQuote() {
+        if (currentQuote) {
+            currentQuote.style.display="none";
+        }
+        currentQuote = dmc5q;
+         dmc5q.style.display="block";
+        }
+
+
     GB.addEventListener('click', showGBFavGame);
     SNES.addEventListener('click', showSNESFavGame);
     GCN.addEventListener('click', showGCNFavGame);
@@ -101,6 +142,27 @@ function addingEventListener() {
     PS3.addEventListener('click', showPS3FavGame);
     PS4.addEventListener('click', showPS4FavGame);
 
+    SNES.addEventListener('click', showSNESQuote);
+    GB.addEventListener('click', showGBFavQuote);
+    GCN.addEventListener('click', showGCNFavQuote);
+    PS2.addEventListener('click', showPS2FavQuote);
+    PS3.addEventListener('click',  showPS3FavQuote);
+    PS4.addEventListener('click', showPS4FavQuote);
+    
+// document.body.appendChild(MetP);
+// document.body.removeChild(ReP, PokP);
+
+// const MetP = document.createElement('p');
+// MetP.textContent = '"Super Metroid Baby" - Matt Phan'
+// MetP.classList.add('quote');
+
+// const PokP = document.createElement('p');
+// PokP.textContent = '"Pokemon Silver  Baby" - Matt Phan"'
+// PokP.classList.add('quote');
+
+// const ReP = document.createElement('p');
+// ReP.textContent = '"Resident Evil 4 Baby" - Matt Phan"'
+// ReP.classList.add('quote')
 }
 
 addingEventListener()
