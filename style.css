@@ -13,12 +13,14 @@ body {
     border-color: #00AB8E;
 }
 
-p {
+#about {
     text-align: left;
-    font-size: 35px;
+    font-size: 28px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left: 55%;
     padding: 10px;
     position: absolute;
+    margin-right: 10%;
 }
 
 #name {
@@ -29,9 +31,11 @@ p {
 
 h1 {
     text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav {
+    padding-top: 25px;
     text-align: center;
 }
 
@@ -43,16 +47,65 @@ table {
     display: inline;
 }
 
+#parent-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+}
+
 .gamePair {
-    display: inline;
+    display: block;
+    flex-direction: row;
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gamePics {
-    width: 450px;
-    margin-left: 35%;
+    display: flex;
+    margin-left: 20%;
     padding-top: 35px;
+    float: left;
+    width: 33.33%;
+    padding: 5px;
 }
 
-.quote {
-    margin: 0;
+/* .quote {
+    display: inline;
+    font-family:'Courier New', Courier, monospace
+} */
+
+.gameQuotes {
+    display: inline;
+    text-align: center;
+    margin: auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+#ResidentEvil4Gif{
+    height: 450px;
+}
+
+#KingdomHearts2Gif {
+    height: 450px;
+}
+
+#DarkSoulsGif{
+    height: 450px;
+}
+
+#DevilMayCry5Gif{
+    height: 450px;
+}
+
+
+#explanation {
+    display: block;
+    font-size: 30px;
+    text-align:center;
+    padding-top: 20px;
+    margin-left: 0%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

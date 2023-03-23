@@ -4,7 +4,8 @@
 function addingEventListener() {
 
     let currentGame
-    let currentQuote    
+    let currentQuote
+    let currentGif    
 
     const SNES = document.getElementById('SuperNintendo');
     const GB = document.getElementById('gameboy');
@@ -27,19 +28,25 @@ function addingEventListener() {
     const dsq = document.getElementById('DarkSoulsQuote');
     const dmc5q = document.getElementById('DevilMayCry5Quote');
 
-
-    // const gameArray = [metroid,poke]
+    const smgif = document.getElementById('SuperMetroidGif');
+    const pkmgif = document.getElementById('PokemonGif');
+    const re4gif = document.getElementById('ResidentEvil4Gif');
+    const kh2gif = document.getElementById('KingdomHearts2Gif'); 
+    const dsgif = document.getElementById('DarkSoulsGif');
+    const dmc5gif = document.getElementById('DevilMayCry5Gif');
 
     function showSNESFavGame() {
         if (currentGame) {
             currentGame.style.display="none";
         }
         currentGame = metroid;
-        // for(game of gameArray){
-        //     game.style.display="none";
-        // }
-        metroid.style.display="block";
+        metroid.style.display="flex";
         
+        if (currentGif) {
+            currentGif.style.display="none";
+        }
+        currentGif = smgif;
+        smgif.style.display="flex"
     }
 
     function showGBFavGame() {
@@ -47,10 +54,13 @@ function addingEventListener() {
             currentGame.style.display="none";
         }
         currentGame = poke;
-        // for(game of gameArray){
-        //     game.style.display="none";
-        // }
-        poke.style.display="block";
+        poke.style.display="flex";
+
+        if (currentGif) {
+            currentGif.style.display="none";
+        }
+        currentGif = pkmgif;
+        pkmgif.style.display="flex"
     }
 
     function showGCNFavGame() {
@@ -59,6 +69,12 @@ function addingEventListener() {
         }
         currentGame = re4;
         re4.style.display="block";
+
+        if (currentGif) {
+            currentGif.style.display="none";
+        }
+        currentGif = re4gif;
+        re4gif.style.display="flex"
     }
 
     function showPS2FavGame() {
@@ -67,6 +83,12 @@ function addingEventListener() {
         }
         currentGame = kh2;
         kh2.style.display="block";
+
+        if (currentGif) {
+            currentGif.style.display="none";
+        }
+        currentGif = kh2gif;
+        kh2gif.style.display="flex";
     }
 
     function showPS3FavGame() {
@@ -75,6 +97,12 @@ function addingEventListener() {
         }
         currentGame = ds;
         ds.style.display="block";
+
+        if (currentGif) {
+            currentGif.style.display="none";
+        }
+        currentGif = dsgif;
+        dsgif.style.display="flex"
     }
 
     function showPS4FavGame() {
@@ -83,6 +111,12 @@ function addingEventListener() {
         }
         currentGame = dmc5;
         dmc5.style.display="block";
+
+        if (currentGif) {
+            currentGif.style.display="none";
+        }
+        currentGif = dmc5gif;
+        dmc5gif.style.display="flex"
     }
 
     function showSNESQuote() {
@@ -148,21 +182,7 @@ function addingEventListener() {
     PS2.addEventListener('click', showPS2FavQuote);
     PS3.addEventListener('click',  showPS3FavQuote);
     PS4.addEventListener('click', showPS4FavQuote);
-    
-// document.body.appendChild(MetP);
-// document.body.removeChild(ReP, PokP);
-
-// const MetP = document.createElement('p');
-// MetP.textContent = '"Super Metroid Baby" - Matt Phan'
-// MetP.classList.add('quote');
-
-// const PokP = document.createElement('p');
-// PokP.textContent = '"Pokemon Silver  Baby" - Matt Phan"'
-// PokP.classList.add('quote');
-
-// const ReP = document.createElement('p');
-// ReP.textContent = '"Resident Evil 4 Baby" - Matt Phan"'
-// ReP.classList.add('quote')
-}
+    }
 
 addingEventListener()
+
